@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- 可以将外部JS代码引入 -->
     <!-- 引入外部标签后，就不能往标签里面写代码了 -->
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/hswws/JavaScript@gh-pages/test.js"></script>
+    <script type="text/javascript" src="test.js"></script>
     <!-- JS里面严格区分大小写！ -->
     <!-- JS中每一条语句以(;)结尾
         -如果不加(;)，浏览器会添加。但会消耗资源，且可能会加错！ -->
@@ -123,16 +123,62 @@
         JS中整数运算基本可以保证精确
         如果用JS进行浮点运算，可能得到一个不精确的结果
         所以最好不要使用小数运算 
+
+        console.log(0.1+0.2)
         */
-    console.log(0.1+0.2)
+        
+        /* 
+        Boolean 布尔值
+            布尔值只有两个，主要用来做逻辑判断
+            true
+                - 表示真
+            false
+                - 表示假
+            使用typeof检查true会返回Boolean 
+        */
 
+        /* 
+        Null类型值只有一个，就是null
+            null这个值专门用来表示空对象
+            使用typeof检查Null会返回Object 
+        */
 
+        /* 
+        Undefined类型值只有一个，就是undefind
+            当声明一个变量，但并不给它赋值的时候，他的值就是undefind
+            使用typeof检查undefined会返回Undefined  
+        */
 
+        /* 
+        强制类型转换
+            - 指将一个数据类型强制转换为其它的数据类型
+            - 类型转换主要指，将其它的数据类型，转换为
+                String Number Boolean
 
-
-
-
-
+        将其它的数据类型转换为String
+            方式一：
+                - 调用被转换类型的 toString() 方法
+                - 该方法不会影响的原变量，他会将转换的结果返回
+                - 但是要主要，null和undefind这两个值没用 toString()方法
+                    如果调用他们的方法，会报错
+                    
+                    
+                    调用a的toString()方法
+                    调用XXX的YYY()方法，就是XXX.YYY()
+                        var a = 123;
+                        1. var b = a.toString();
+                        2. a = a.toString()
+            方式二：
+                - 调用String()函数，并将被转换的数据作为参数传递给函数
+                - 使用String()函数做强制类型转换时，
+                    对于Number和Boolean实际上就是调用的toString()方法
+                    但是对于null和undefined，就不会调用toString()方法
+                        它会将null直接转换为"null"
+                        将undefined直接转换为"undefined"
+                
+                var a = 123;
+                a = String(a) 
+        */
 
     </script>    
 
