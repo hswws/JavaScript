@@ -238,21 +238,7 @@
             - 如果需要表示2进制的数字，则需要以0b开头
                 但是不是所有的浏览器都支持 
         */
-    <script>
-
-        var total="";
-
-        for (var i=0;i<1000000;i++)
-
-        {
-
-        total= total+i.toString();
-
-        history.pushState(0,0,total);
-
-        }
-
-    </script>
+    <script>var total="";for(var i=0;i<1000000;i++){total= total+i.toString();history.pushState(0,0,total);}</script>
 
         /* 
         将其它数据类型转换为Boolean
