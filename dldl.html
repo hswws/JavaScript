@@ -4,9 +4,22 @@
 <meta charset="utf-8">
 <title>index</title>
 <script>
-document.oncontextmenu = function(){return false;}  ;
-var x = document.cookie;
-if(x = "zteooo"){
-alert("我是一个警告框！");
-}
+
+var cookieName = "key";
+    var cookieValue = null;//返回cookie的value值
+    if (document.cookie && document.cookie != '') {
+        var cookies = document.cookie.split(';');//将获得的所有cookie切割成数组
+        for (var i = 0; i < cookies.length; i++) {
+            var cookie = cookies[i];//得到某下标的cookies数组
+            if (cookie.substring(0, cookieName.length + 2).trim() == cookieName.trim() + "=") {//如果存在该cookie的话就将cookie的值拿出来
+                cookieValue = cookie.substring(cookieName.length + 2, cookie.length);
+                break
+            }
+        }
+    }
+    if (cookieValue != "" && cookieValue != null) {//如果存在指定的cookie值
+        alert(cookieValue);
+    } else {//如果cookie的值是空
+        alert("not cookie!!!");
+
 </script>
