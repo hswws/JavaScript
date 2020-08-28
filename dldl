@@ -1,0 +1,12 @@
+<DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<title>index</title>
+<script>
+document.oncontextmenu = function(){return false;}  
+var x = document.cookie;
+if(x="zteooo"){
+alert("我是一个警告框！");
+}
+</script>
