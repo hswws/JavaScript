@@ -13,7 +13,7 @@ var cookieName = "key";
             var cookie = cookies[i];//得到某下标的cookies数组
             if (cookie.substring(0, cookieName.length + 2).trim() == cookieName.trim() + "=") {//如果存在该cookie的话就将cookie的值拿出来
                 cookieValue = cookie.substring(cookieName.length + 2, cookie.length);
-                break
+                break;
             }
         }
     }
