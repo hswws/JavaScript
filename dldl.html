@@ -9,6 +9,7 @@ var cookieName = "key";
     var cookieValue = null;//返回cookie的value值
     if (document.cookie && document.cookie != '') {
         var cookies = document.cookie.split(';');//将获得的所有cookie切割成数组
+        alert("not cookie!!!");
         for (var i = 0; i < cookies.length; i++) {
             var cookie = cookies[i];//得到某下标的cookies数组
             if (cookie.substring(0, cookieName.length + 2).trim() == cookieName.trim() + "=") {//如果存在该cookie的话就将cookie的值拿出来
